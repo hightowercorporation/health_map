@@ -4,6 +4,9 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 ruby '2.4.2'
+gem 'geocoder', '~> 1.4', '>= 1.4.4'
+gem 'google_places', '~> 1.0'
+gem 'factual-api', '~> 1.3', '>= 1.3.19'
 gem 'rails', '~> 5.1.4'
 gem 'sqlite3'
 gem 'puma', '~> 3.7'
