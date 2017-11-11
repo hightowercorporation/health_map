@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Occurred on:</strong>
+  <%= @incident_report.occurred_on %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @incident_report.category %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @incident_report.address %>
+</p>
+
+<%= link_to 'Edit', edit_incident_report_path(@incident_report) %> |
+<%= link_to 'Back', incident_reports_path %>
