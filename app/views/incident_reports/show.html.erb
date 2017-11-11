@@ -1,18 +1,53 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Occurred on:</strong>
-  <%= @incident_report.occurred_on %>
-</p>
-
-<p>
   <strong>Category:</strong>
   <%= @incident_report.category %>
 </p>
 
 <p>
-  <strong>Address:</strong>
-  <%= @incident_report.address %>
+  <strong>Street number:</strong>
+  <%= @incident_report.street_number %>
+</p>
+
+<p>
+  <strong>Street:</strong>
+  <%= @incident_report.street %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @incident_report.city %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @incident_report.state %>
+</p>
+
+<p>
+  <strong>Zip:</strong>
+  <%= @incident_report.zip %>
+</p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @incident_report.country %>
+</p>
+
+<p>
+  <strong>Lattitude:</strong>
+  <%= @incident_report.lattitude %>
+</p>
+
+<p>
+  <strong>Longitude:</strong>
+  <%= @incident_report.longitude %>
+</p>
+
+<p>
+  <strong>Occurred on:</strong>
+  <%= @incident_report.occurred_on %>
 </p>
 
 <%= link_to 'Edit', edit_incident_report_path(@incident_report) %> |

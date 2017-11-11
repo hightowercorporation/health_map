@@ -5,9 +5,16 @@
 <table>
   <thead>
     <tr>
-      <th>Occurred on</th>
       <th>Category</th>
-      <th>Address</th>
+      <th>Street number</th>
+      <th>Street</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Zip</th>
+      <th>Country</th>
+      <th>Lattitude</th>
+      <th>Longitude</th>
+      <th>Occurred on</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -15,9 +22,16 @@
   <tbody>
     <% @incident_reports.each do |incident_report| %>
       <tr>
-        <td><%= incident_report.occurred_on %></td>
         <td><%= incident_report.category %></td>
-        <td><%= incident_report.address %></td>
+        <td><%= incident_report.street_number %></td>
+        <td><%= incident_report.street %></td>
+        <td><%= incident_report.city %></td>
+        <td><%= incident_report.state %></td>
+        <td><%= incident_report.zip %></td>
+        <td><%= incident_report.country %></td>
+        <td><%= incident_report.lattitude %></td>
+        <td><%= incident_report.longitude %></td>
+        <td><%= incident_report.occurred_on %></td>
         <td><%= link_to 'Show', incident_report %></td>
         <td><%= link_to 'Edit', edit_incident_report_path(incident_report) %></td>
         <td><%= link_to 'Destroy', incident_report, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -12,18 +12,53 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :occurred_on %>
-    <%= form.date_select :occurred_on, id: :incident_report_occurred_on %>
-  </div>
-
-  <div class="field">
     <%= form.label :category %>
     <%= form.text_field :category, id: :incident_report_category %>
   </div>
 
   <div class="field">
-    <%= form.label :address %>
-    <%= form.text_field :address, id: :incident_report_address %>
+    <%= form.label :street_number %>
+    <%= form.text_field :street_number, id: :incident_report_street_number %>
+  </div>
+
+  <div class="field">
+    <%= form.label :street %>
+    <%= form.text_field :street, id: :incident_report_street %>
+  </div>
+
+  <div class="field">
+    <%= form.label :city %>
+    <%= form.text_field :city, id: :incident_report_city %>
+  </div>
+
+  <div class="field">
+    <%= form.label :state %>
+    <%= form.text_field :state, id: :incident_report_state %>
+  </div>
+
+  <div class="field">
+    <%= form.label :zip %>
+    <%= form.text_field :zip, id: :incident_report_zip %>
+  </div>
+
+  <div class="field">
+    <%= form.label :country %>
+    <%= form.text_field :country, id: :incident_report_country %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lattitude %>
+    <%= form.text_field :lattitude, id: :incident_report_lattitude %>
+  </div>
+
+  <div class="field">
+    <%= form.label :longitude %>
+    <%= form.text_field :longitude, id: :incident_report_longitude %>
+  </div>
+
+  <div class="field">
+    <%= form.label :occurred_on %>
+    <%= form.date_select :occurred_on, id: :incident_report_occurred_on %>
   </div>
 
   <div class="actions">
