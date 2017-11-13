@@ -1,13 +1,53 @@
-  	<nav class="navbar navbar-expand-lg">
-  		<a class="navbar-brand" href="#"></a>
+<head>
+    <style>
+		#map {
+			height: 400px;
+			width: 100%;
+		}
+
+	<meta charset="UTF-8">
+	<title>Document</title>
+	
+	<!-- bootstrap CDN -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+	<link rel="stylesheet" href="style.css">
+    </style>
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg">
+		<a class="navbar-brand" href="#"></a>
 		<a class="navbar-brand" href="home">Home</a>
 		<a class="navbar-brand" href="users">View Users</a>
 		<a class="navbar-brand" href="viewIncidents">View Incidents</a>
 		<a class="navbar-brand" href="map">Map</a>
-		<a class="navbar-brand" href="addIncident">Incident</a>
 		<a class="navbar-brand" href="addUser">Signup</a>
 	</nav>
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
-<%= render 'users' %>
- <script src="https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key="></script>
+	<div class="container">
+		<!-- Content here -->
+  		<div class="row">
+		   		<div class="col-sm-12">
+    			<h3>My Google Maps Demo</h3>
+				<div id="map"></div>
+				<script>
+					function initMap() {
+						var uluru = {lat: -25.363, lng: 131.044};
+						var map = new google.maps.Map(document.getElementById('map'), {
+							zoom: 4,
+							center: uluru
+						});
+						var marker = new google.maps.Marker({
+							position: uluru,
+							map: map
+						});
+					}
+				</script>
+   				<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcO6AeyyBoz-tYO1BYrYJ-LoiPG8orfW4&callback=initMap">
+				</script>
+			</div>
+		</div>
+	</div>
+	<h1>Home#index</h1>
+	<p>Find me in app/views/home/index.html.erb</p>
+	<%= render 'users' %>
+	 <script src="https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key="></script>
+</body>
